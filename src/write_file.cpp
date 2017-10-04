@@ -10,7 +10,7 @@ WriteFile::WriteFile(string size, int type) {
 
 WriteFile::~WriteFile() {}
 
-void WriteFile::write_result_matrix(vector<vector<int>> matrix) {
+void WriteFile::write_result_matrix(matrix matrix_result) {
     ofstream result;
     result.open(result_file);
 
@@ -18,7 +18,7 @@ void WriteFile::write_result_matrix(vector<vector<int>> matrix) {
         std::cout << "Error writing file!\n";
     }
 
-    for (auto line : matrix) {
+    for (auto line : matrix_result) {
         for (auto i : line) {
             result << i << " ";
         }

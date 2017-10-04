@@ -9,7 +9,7 @@ ReadFile::~ReadFile() {
 
 }
 
-vector<vector<int>> ReadFile::get_matrix_a() {
+matrix ReadFile::get_matrix_a() {
     int size, height;
     file_a.open(file_a_name);
 
@@ -18,7 +18,7 @@ vector<vector<int>> ReadFile::get_matrix_a() {
     }
 
     file_a >> size >> height;
-    vector<vector<int>> a(size, vector<int>(size, 0));
+    matrix a(size, vector<int>(size, 0));
 
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
@@ -26,19 +26,12 @@ vector<vector<int>> ReadFile::get_matrix_a() {
         }
     }
 
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
-             cout << a[i][j] << " ";
-        }
-        cout << endl;
-    }
-
     file_a.close();
 
     return a;
 }
 
-vector<vector<int>> ReadFile::get_matrix_b() {
+matrix ReadFile::get_matrix_b() {
     int size, height;
     file_b.open(file_b_name);
 
@@ -47,19 +40,12 @@ vector<vector<int>> ReadFile::get_matrix_b() {
     }
 
     file_b >> size >> height;
-    vector<vector<int>> b(size, vector<int>(size, 0));
+    matrix b(size, vector<int>(size, 0));
 
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
              file_b >> b[i][j];
         }
-    }
-
-    for (int i = 0; i < size; i++) {
-        for (int j = 0; j < size; j++) {
-             cout << b[i][j] << " ";
-        }
-        cout << endl;
     }
 
     file_b.close();
