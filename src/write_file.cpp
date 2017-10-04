@@ -6,8 +6,8 @@ using std::ofstream;
 
 #include "write_file.h"
 
-WriteFile::WriteFile(string size, int type) {
-    string type_s = type ? "conc" : "seq";
+WriteFile::WriteFile(string size, int n_threads) {
+    string type_s = n_threads ? "conc_" + to_string(n_threads) : "seq";
     result_file = "data/results/C" + size + "x" + size + "_" + type_s + ".txt";
     metrics_file = "data/metrics/" + size + "_" + type_s + ".txt";
 }
