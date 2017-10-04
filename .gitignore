@@ -5,5 +5,9 @@ build/*
 # Ignore Compiled Files
 bin/*
 
+# Ignore Generated Results
+data/results/*
+data/metrics/*
+
 # Do not ignore .gikeep files
 !*.gitkeep
