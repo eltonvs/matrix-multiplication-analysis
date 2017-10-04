@@ -20,15 +20,15 @@ using std::vector;
 
 class ReadFile {
  private:
- 	ifstream file_a;
- 	ifstream file_b;
- 	string file_a_name;
- 	string file_b_name;
+    ifstream file_a;
+    ifstream file_b;
+    string file_a_name;
+    string file_b_name;
  public:
- 	ReadFile(string size);
- 	~ReadFile();
- 	matrix get_matrix_a();
- 	matrix get_matrix_b();
+    ReadFile(string size);
+    ~ReadFile();
+    matrix get_matrix_a();
+    matrix get_matrix_b();
 };
 
 #endif
