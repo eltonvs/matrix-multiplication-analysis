@@ -1,4 +1,8 @@
 #include <iostream>
+#include <cmath>
+
+#include <fstream>
+using std::ofstream;
 
 #include "write_file.h"
 
@@ -19,11 +23,36 @@ void WriteFile::write_result_matrix(matrix matrix_result) {
     }
 
     for (auto line : matrix_result) {
-        for (auto i : line) {
-            result << i << " ";
+        for (auto val : line) {
+            result << val << " ";
         }
         result << "\n";
     }
 
     result.close();
+}
+
+void WriteFile::write_metrics(vector<long double> runtime) {
+    // Calculate Average Runtime
+    long double average_time = 0;
+    for (long double val : runtime) {
+        average_time += val/runtime.size();
+    }
+
+    // Calculate Variance
+    long double variance = 0;
+    for (long double val : runtime) {
+        variance += pow(val - average_time, 2.0)/runtime.size();
+    }
+
+    // Calculate Standard Deviation
+    long double standard_dev = sqrt(variance);
+
+    // Write to metrics file
+    ofstream metrics;
+    metrics.open(metrics_file);
+    metrics << "Average runtime: " << average_time << "\n";
+    metrics << "Variance: " << variance << "\n";
+    metrics << "Standard deviation: " << standard_dev << "\n";
+    metrics.close();
 }

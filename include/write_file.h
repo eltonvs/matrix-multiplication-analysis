@@ -1,9 +1,6 @@
 #ifndef WRITE_FILE_H
 #define WRITE_FILE_H
 
-#include <fstream>
-using std::ofstream;
-
 #include <string>
 using std::string;
 
@@ -20,7 +17,8 @@ class WriteFile {
  public:
     WriteFile(string size, int type);
     ~WriteFile();
-    void write_result_matrix(vector<vector<int>> matrix_result);
+    void write_result_matrix(matrix matrix_result);
+    void write_metrics(vector<long double> runtime);
 };
 
 #endif
