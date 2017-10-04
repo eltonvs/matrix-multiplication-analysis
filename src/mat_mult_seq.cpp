@@ -1,3 +1,7 @@
+#include <chrono>
+using namespace std::chrono;
+using std::milli;
+
 #include "mat_mult_seq.h"
 
 void seq_multiply(matrix a, matrix b, matrix &c) {
