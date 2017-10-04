@@ -9,5 +9,8 @@ bin/*
 data/results/*
 data/metrics/*
 
+# Ignore vim files
+*.swp
+
 # Do not ignore .gikeep files
 !*.gitkeep
