@@ -8,5 +8,6 @@ using std::vector;
 
 void seq_multiply(int size, matrix a, matrix b, matrix &c);
 
-#endif
+void seq_time_measurement(matrix a, matrix b, matrix &c, timing &runtimes);
 
+#endif

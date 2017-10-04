@@ -1,11 +1,11 @@
 #include "mat_mult_seq.h"
 
-void seq_multiply(int size, matrix a, matrix b, matrix &c) {
+void seq_multiply(matrix a, matrix b, matrix &c) {
 
-	for (int i = 0; i < size; ++i) {
-        for (int j = 0; j < size; ++j) {
+	for (auto i = 0u; i < a.size(); ++i) {
+        for (auto j = 0u; j < b.size(); ++j) {
             int sum = 0;
-            for (int k = 0; k < size; ++k) {
+            for (auto k = 0u; k < c.size(); ++k) {
                 sum += a[i][k] * b[k][j];
             }
             c[i][j] = sum;
@@ -13,3 +13,13 @@ void seq_multiply(int size, matrix a, matrix b, matrix &c) {
     }
 }
 
+void seq_time_measurement(matrix a, matrix b, matrix &c, timing &runtime) {
+
+	for (int i = 0; i < N_EXECUTIONS; ++i) {
+        auto s = steady_clock::now();
+        seq_multiply(a, b, c);
+        auto e = steady_clock::now();
+        auto diff = duration <double, milli> (e - s).count();
+        runtimes.push_back(diff);
+    }
+}
