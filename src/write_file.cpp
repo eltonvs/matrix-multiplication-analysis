@@ -35,14 +35,14 @@ void WriteFile::write_result_matrix(matrix matrix_result) {
 void WriteFile::write_metrics(timing runtimes) {
     // Calculate Average Runtime
     long double average_time = 0;
-    for (long double val : runtime) {
-        average_time += val/runtime.size();
+    for (long double val : runtimes) {
+        average_time += val/runtimes.size();
     }
 
     // Calculate Variance
     long double variance = 0;
-    for (long double val : runtime) {
-        variance += pow(val - average_time, 2.0)/runtime.size();
+    for (long double val : runtimes) {
+        variance += pow(val - average_time, 2.0)/runtimes.size();
     }
 
     // Calculate Standard Deviation
