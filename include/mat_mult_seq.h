@@ -1,6 +1,10 @@
 #ifndef MAT_MULT_SEQ_H
 #define MAT_MULT_SEQ_H
 
+#include <chrono>
+using namespace std::chrono;
+using std::milli;
+
 #include <vector>
 using std::vector;
 

@@ -13,7 +13,7 @@ void seq_multiply(matrix a, matrix b, matrix &c) {
     }
 }
 
-void seq_time_measurement(matrix a, matrix b, matrix &c, timing &runtime) {
+void seq_time_measurement(matrix a, matrix b, matrix &c, timing &runtimes) {
 
 	for (int i = 0; i < N_EXECUTIONS; ++i) {
         auto s = steady_clock::now();

@@ -2,10 +2,6 @@
 using std::cout;
 using std::endl;
 
-#include <chrono>
-using namespace std::chrono;
-using std::milli;
-
 #include "read_file.h"
 #include "write_file.h"
 #include "mat_mult_seq.h"
