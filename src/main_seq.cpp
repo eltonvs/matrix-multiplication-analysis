@@ -2,6 +2,9 @@
 using std::cout;
 using std::endl;
 
+#include <functional>
+using std::ref;
+
 #include "read_file.h"
 #include "write_file.h"
 #include "mat_mult_seq.h"
@@ -21,7 +24,7 @@ int main(int argc, char *argv[]) {
     matrix c(size, vector<int>(size, 0));
 
     timing runtimes;
-    seq_time_measurement(a, b, c, runtimes);
+    seq_time_measurement(a, b, ref(c), runtimes);
 
     wf.write_result_matrix(c);
     wf.write_metrics(runtimes);
