@@ -10,6 +10,8 @@ using std::string;
 #include <vector>
 using std::vector;
 
+#include "macros.h"
+
 class WriteFile {
  private:
     string result_file;
@@ -18,7 +20,7 @@ class WriteFile {
  public:
     WriteFile(string size, int type);
     ~WriteFile();
-    void write_result_matrix(vector<vector<int>> matrix);
+    void write_result_matrix(vector<vector<int>> matrix_result);
 };
 
 #endif

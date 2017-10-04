@@ -8,12 +8,15 @@ using std::endl;
 
 #include <string>
 using std::string;
+using std::stoi;
 
 #include <fstream>
 using std::ifstream;
 
 #include <vector>
 using std::vector;
+
+#include "macros.h"
 
 class ReadFile {
  private:
@@ -24,8 +27,8 @@ class ReadFile {
  public:
  	ReadFile(string size);
  	~ReadFile();
- 	vector<vector<int>> get_matrix_a();
- 	vector<vector<int>> get_matrix_b();
+ 	matrix get_matrix_a();
+ 	matrix get_matrix_b();
 };
 
 #endif
