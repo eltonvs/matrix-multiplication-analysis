@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     }
 
     ReadFile rf(argv[1]);
-    WriteFile wf(argv[1], 0);
+    WriteFile wf(argv[1]);
 
     int size = stoi(argv[1]);
     matrix a = rf.get_matrix_a();
