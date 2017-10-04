@@ -32,7 +32,7 @@ void WriteFile::write_result_matrix(matrix matrix_result) {
     result.close();
 }
 
-void WriteFile::write_metrics(vector<long double> runtime) {
+void WriteFile::write_metrics(timing runtimes) {
     // Calculate Average Runtime
     long double average_time = 0;
     for (long double val : runtime) {

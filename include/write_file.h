@@ -18,7 +18,7 @@ class WriteFile {
     WriteFile(string size, int type);
     ~WriteFile();
     void write_result_matrix(matrix matrix_result);
-    void write_metrics(vector<long double> runtime);
+    void write_metrics(timing runtimes);
 };
 
 #endif
