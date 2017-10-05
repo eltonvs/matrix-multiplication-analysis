@@ -6,6 +6,6 @@ using std::vector;
 
 #define matrix vector<vector<int>>
 #define timing vector<long double>
-#define N_EXECUTIONS 20
+#define N_EXECUTIONS 40
 
 #endif
