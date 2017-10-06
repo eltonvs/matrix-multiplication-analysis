@@ -1,3 +1,8 @@
+/**
+ * @file  mat_mult_seq.cpp
+ * @brief Implements functions of the sequential version of a matrix multiplication    
+ * @date  05/10/2017
+ */
 #include <chrono>
 using namespace std::chrono;
 using std::milli;
@@ -7,6 +12,12 @@ using std::ref;
 
 #include "mat_mult_seq.h"
 
+/**
+ * @brief Multiplies matrixes sequentially 
+ * @param a Matrix of integers
+ * @param b Matrix of integers
+ * @param c Matrix of integers 
+ */
 void seq_multiply(matrix a, matrix b, matrix &c) {
 
     for (auto i = 0u; i < a.size(); ++i) {
@@ -20,6 +31,13 @@ void seq_multiply(matrix a, matrix b, matrix &c) {
     }
 }
 
+/**
+ * @brief Measures time of execution of matrix multiplication 
+ * @param a Matrix of integers  
+ * @param b Matrix of integers 
+ * @param c Matrix of integers 
+ * @param runtimes Vector that stores runtime of each multiplication     
+ */
 void seq_time_measurement(matrix a, matrix b, matrix &c, timing &runtimes) {
 
     for (int i = 0; i < N_EXECUTIONS; ++i) {

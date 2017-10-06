@@ -1,3 +1,8 @@
+/**
+ * @file    write_file.h
+ * @brief   Definition of WriteFile class
+ * @date    05/10/2017
+ */
 #ifndef WRITE_FILE_H
 #define WRITE_FILE_H
 
@@ -9,6 +14,10 @@ using std::vector;
 
 #include "macros.h"
 
+/**
+ * @class WriteFile write_file.h
+ * @brief Class that writes resulting data of matrix multiplication to files  
+ */
 class WriteFile {
  private:
     string result_file;

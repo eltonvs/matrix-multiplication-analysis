@@ -1,3 +1,9 @@
+/**
+ * @file    main_conc.cpp
+ * @brief   Concurrent version of a matrix multiplication
+ * @details   
+ * @date    05/10/2017
+ */
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -9,6 +15,9 @@ using std::ref;
 #include "write_file.h"
 #include "mat_mult_conc.h"
 
+/** 
+* @brief Main function 
+*/
 int main(int argc, char *argv[]) {
     if (argc != 3) {
         cout << "Error" << endl;

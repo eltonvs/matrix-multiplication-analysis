@@ -1,3 +1,8 @@
+/**
+ * @file    read_file.h
+ * @brief   Definition of ReadFile class 
+ * @date    05/10/2017
+ */
 #ifndef READ_FILE_H
 #define READ_FILE_H
 
@@ -18,6 +23,10 @@ using std::vector;
 
 #include "macros.h"
 
+/**
+ * @class ReadFile read_file.h
+ * @brief Class that reads data in matrix files
+ */
 class ReadFile {
  private:
     ifstream file_a;
