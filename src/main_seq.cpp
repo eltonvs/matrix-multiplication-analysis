@@ -1,3 +1,8 @@
+/**
+ * @file  main_seq.cpp
+ * @brief Sequential version of a matrix multiplication
+ * @date  05/10/2017
+ */
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -9,6 +14,9 @@ using std::ref;
 #include "write_file.h"
 #include "mat_mult_seq.h"
 
+/** 
+* @brief Main function 
+*/
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         cout << "Error" << endl;

@@ -1,14 +1,31 @@
+/**
+ * @file  read_file.cpp
+ * @brief Implements methods defined in class ReadFile
+ * @date  05/10/2017
+ */
 #include "read_file.h"
 
+/**
+ * @brief   ReadFile constructor
+ * @details Defines names of files to be read
+ * @param   size String that contains the size of the resulting matrix
+ */
 ReadFile::ReadFile(string size) {
     file_a_name = "data/A" + size + "x" + size + ".txt";
     file_b_name = "data/B" + size + "x" + size + ".txt";
 }
 
+/**
+ * @details Empty Destructor
+ */
 ReadFile::~ReadFile() {
 
 }
 
+/**
+ * @brief  Reads file and gets data of matrix A
+ * @return Matrix of integers
+ */
 matrix ReadFile::get_matrix_a() {
     int size, height;
     file_a.open(file_a_name);
@@ -31,6 +48,10 @@ matrix ReadFile::get_matrix_a() {
     return a;
 }
 
+/**
+ * @brief  Reads file and gets data of matrix B
+ * @return Matrix of integers
+ */
 matrix ReadFile::get_matrix_b() {
     int size, height;
     file_b.open(file_b_name);
