@@ -23,11 +23,11 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    ReadFile rf(argv[1]);
-    WriteFile wf(argv[1], 1);
-
     int size = stoi(argv[1]);
     int n_threads = stoi(argv[2]);
+
+    ReadFile rf(argv[1]);
+    WriteFile wf(argv[1], n_threads);
 
     matrix a = rf.get_matrix_a();
     matrix b = rf.get_matrix_b();

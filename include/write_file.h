@@ -8,6 +8,7 @@
 
 #include <string>
 using std::string;
+using std::to_string;
 
 #include <vector>
 using std::vector;
@@ -24,7 +25,7 @@ class WriteFile {
     string metrics_file;
 
  public:
-    WriteFile(string size, int type);
+    WriteFile(string size, int n_threads = 0);
     ~WriteFile();
     void write_result_matrix(matrix matrix_result);
     void write_metrics(timing runtimes);
