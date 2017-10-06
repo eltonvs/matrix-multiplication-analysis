@@ -1,7 +1,7 @@
 /**
- * @file    main_seq.cpp
- * @brief   Sequential version of a matrix multiplication
- * @date    05/10/2017
+ * @file  main_seq.cpp
+ * @brief Sequential version of a matrix multiplication
+ * @date  05/10/2017
  */
 #include <iostream>
 using std::cout;

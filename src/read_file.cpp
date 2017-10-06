@@ -1,8 +1,7 @@
 /**
- * @file    read_file.cpp
- * @brief   Implements methods defined in class ReadFile
- * @details    
- * @date    05/10/2017
+ * @file  read_file.cpp
+ * @brief Implements methods defined in class ReadFile
+ * @date  05/10/2017
  */
 #include "read_file.h"
 
