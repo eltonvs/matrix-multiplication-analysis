@@ -1,7 +1,6 @@
 /**
  * @file    write_file.cpp
  * @brief   Implements methods defined in class WriteFile
- * @details    
  * @date    05/10/2017
  */
 #include <iostream>

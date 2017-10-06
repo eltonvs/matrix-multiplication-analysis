@@ -1,7 +1,6 @@
 /**
  * @file    main_seq.cpp
  * @brief   Sequential version of a matrix multiplication
- * @details    
  * @date    05/10/2017
  */
 #include <iostream>

@@ -1,7 +1,7 @@
 /**
- * @file    read_file.h
- * @brief   Definition of ReadFile class 
- * @date    05/10/2017
+ * @file  read_file.h
+ * @brief Definition of ReadFile class 
+ * @date  05/10/2017
  */
 #ifndef READ_FILE_H
 #define READ_FILE_H

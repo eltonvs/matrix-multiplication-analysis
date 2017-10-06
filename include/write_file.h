@@ -1,7 +1,7 @@
 /**
- * @file    write_file.h
- * @brief   Definition of WriteFile class
- * @date    05/10/2017
+ * @file  write_file.h
+ * @brief Definition of WriteFile class
+ * @date  05/10/2017
  */
 #ifndef WRITE_FILE_H
 #define WRITE_FILE_H
